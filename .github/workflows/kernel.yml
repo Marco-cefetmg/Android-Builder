@@ -306,6 +306,7 @@ jobs:
           make ${{ env.ARGS }}
           pwd
           tree -L 2 .
+          echo "################"
           tree ${{ env.OUT_DIR }}
 
       - name: 💛 Upload Image
