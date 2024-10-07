@@ -21,7 +21,7 @@
       "CC": "aarch64-linux-android-gcc",
       "externalCommands": {
         "CROSS_COMPILE": "aarch64-linux-android-",
-        "ANDROID_MAJOR_VERSION": "o",
+        "ANDROID_MAJOR_VERSION": "o"
       }
     },
     "AnyKernel3": {
