@@ -71,7 +71,7 @@ jobs:
       ENABLE_LXC: ${{ matrix.CONFIG.enableLXC }}
 
       # Set output & ccache directory
-      OUT_DIR: "${{ github.workspace }}"
+      OUT_DIR: "${{ github.workspace }}/out"
       CCACHE_DIR: "${{ github.workspace }}/ccache"
     steps:
       # Set swap space
@@ -183,15 +183,6 @@ jobs:
 
               echo "🤔 Clone $toolchain_name => ($toolchain_repo)"
             fi
-            echo "##############################################"
-            ls
-            echo "##############################################"
-            ls $toolchain_name
-            echo "##############################################"
-            ls aarch64
-            echo "##############################################"
-            tree $toolchain_name
-            echo "##############################################"
 
             jq -r ".binaryEnv[] | tostring" <<< "$toolchain" | while read -r subPath; do
               echo "${{ env.WORKSPACE }}/$toolchain_name/$subPath" >> $GITHUB_PATH
