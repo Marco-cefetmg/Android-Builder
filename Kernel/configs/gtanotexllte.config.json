@@ -1,7 +1,7 @@
 [
   {
     "kernelSource": {
-      "name": "gtanotexllteStock",
+      "name": "android_kernel_samsung_exynos7870",
       "repo": "https://github.com/Marco-cefetmg/android_kernel_samsung_exynos7870",
       "branch": "master",
       "device": "gtanotexllte",
@@ -19,9 +19,9 @@
     "params": {
       "ARCH": "arm64",
       "CC": "aarch64-linux-android-gcc",
+      "CROSS_COMPILE": "aarch64-linux-android-",
+      "ANDROID_MAJOR_VERSION": "o",
       "externalCommands": {
-        "CROSS_COMPILE": "aarch64-linux-android-",
-        "ANDROID_MAJOR_VERSION": "o"
       }
     },
     "AnyKernel3": {
