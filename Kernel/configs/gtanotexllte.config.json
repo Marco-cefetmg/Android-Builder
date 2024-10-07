@@ -12,9 +12,7 @@
         "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
         "branch": "oreo-cts-release",
         "name": "gcc",
-        "binaryEnv": [
-          "bin"
-        ]
+        "binaryEnv": ["bin"]
       }
     ],
     "enableCcache": false,
@@ -22,7 +20,7 @@
       "ARCH": "arm64",
       "CC": "gcc",
       "externalCommands": {
-        "CROSS_COMPILE": "aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-",
+        "CROSS_COMPILE": "bin/aarch64-linux-android-",
         "ANDROID_MAJOR_VERSION": "o"
       }
     },
