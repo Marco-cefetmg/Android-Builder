@@ -72,7 +72,7 @@ jobs:
       ENABLE_LXC: ${{ matrix.CONFIG.enableLXC }}
 
       # Set output & ccache directory
-      OUT_DIR: "${{ github.workspace }}"
+      OUT_DIR: "${{ github.workspace }}/android_kernel_samsung_exynos7870"
       CCACHE_DIR: "${{ github.workspace }}/ccache"
     steps:
       # Set swap space
