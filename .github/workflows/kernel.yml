@@ -304,7 +304,9 @@ jobs:
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
           make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
           make ${{ env.ARGS }}
-          # tree ${{ env.OUT_DIR }}
+          pwd
+          tree -L 2 .
+          tree ${{ env.OUT_DIR }}
 
       - name: 💛 Upload Image
         uses: actions/upload-artifact@v3
