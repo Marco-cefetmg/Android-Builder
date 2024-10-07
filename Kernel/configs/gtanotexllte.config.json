@@ -20,7 +20,7 @@
       "ARCH": "arm64",
       "CC": "aarch64-linux-android-gcc",
       "externalCommands": {
-        "CROSS_COMPILE": "aarch64-linux-android-",
+        "CROSS_COMPILE": "/home/runner/work/Android-Builder/Android-Builder/aarch64/bin/aarch64-linux-android-",
         "ANDROID_MAJOR_VERSION": "o"
       }
     },
