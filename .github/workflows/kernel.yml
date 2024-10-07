@@ -303,7 +303,9 @@ jobs:
           export KBUILD_BUILD_HOST=Github-Action
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
           make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
-          tree -L 3 .
+          tree -L 2 ./init
+          echo "###############"
+          tree -L 2 .
           make ${{ env.ARGS }}
           # tree ${{ env.OUT_DIR }}
 
