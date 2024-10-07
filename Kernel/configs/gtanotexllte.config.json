@@ -19,9 +19,9 @@
     "params": {
       "ARCH": "arm64",
       "CC": "aarch64-linux-android-gcc",
-      "CROSS_COMPILE": "aarch64-linux-android-",
-      "ANDROID_MAJOR_VERSION": "o",
       "externalCommands": {
+        "CROSS_COMPILE": "aarch64-linux-android-",
+        "ANDROID_MAJOR_VERSION": "o",
       }
     },
     "AnyKernel3": {
