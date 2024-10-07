@@ -72,7 +72,7 @@ jobs:
       ENABLE_LXC: ${{ matrix.CONFIG.enableLXC }}
 
       # Set output & ccache directory
-      OUT_DIR: "${{ github.workspace }}/android_kernel_samsung_exynos7870"
+      OUT_DIR: "${{ github.workspace }}/${{ env.KERNEL_NAME }}"
       CCACHE_DIR: "${{ github.workspace }}/ccache"
     steps:
       # Set swap space
@@ -304,10 +304,7 @@ jobs:
           export KBUILD_BUILD_USER=$(echo ${{ github.actor }} | tr A-Z a-z)
           make ${{ env.ARGS }} ${{ env.KERNEL_DEFCONFIG_PATH }}
           make ${{ env.ARGS }}
-          pwd
-          tree -L 2 .
-          echo "################"
-          tree ${{ env.OUT_DIR }}
+          # tree ${{ env.OUT_DIR }}
 
       - name: 💛 Upload Image
         uses: actions/upload-artifact@v3
