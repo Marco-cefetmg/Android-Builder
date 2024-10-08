@@ -26,11 +26,7 @@
     },
     "AnyKernel3": {
       "use": true,
-      "release": true,
-      "custom": {
-        "repo": "https://github.com/Marco-cefetmg/AnyKernel3/",
-        "branch": "gtanotexllte"
-      }
+      "release": true
     },
     "enableKernelSU": false,
     "enableLXC": false
