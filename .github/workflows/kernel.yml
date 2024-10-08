@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/kernel.yml"
-      - ".github/workflows/gtanotexllte.config.json"
+      - ".github/workflows/*.config.json"
   workflow_dispatch:
   schedule:
     - cron: "14 13 * * 5"
@@ -72,7 +72,7 @@ jobs:
       ENABLE_LXC: ${{ matrix.CONFIG.enableLXC }}
 
       # Set output & ccache directory
-      OUT_DIR: "${{ github.workspace }}/android_kernel_samsung_exynos7870"
+      OUT_DIR: "${{ github.workspace }}/${{ matrix.CONFIG.kernelSource.name }}"
       CCACHE_DIR: "${{ github.workspace }}/ccache"
     steps:
       # Set swap space
